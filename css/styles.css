@@ -62,10 +62,6 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-/* Section product */
-.section.product {
-  padding-top: 0;
-}
 /* Section title */
 .section-title {
   margin-bottom: 50px;
@@ -139,7 +135,7 @@ header {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
 
   display: block;
   width: 100%;
@@ -260,7 +256,8 @@ header {
   background-color: var(--team-background-color);
 }
 .features-title,
-.social-title {
+.social-title,
+.mailing-form-label {
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -272,6 +269,9 @@ header {
   text-transform: uppercase;
 }
 /* Section Product */
+.product-section {
+  padding-top: 0;
+}
 .product-section .list {
   display: flex;
   gap: 30px;
@@ -447,7 +447,8 @@ header {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-link:hover .card-text {
+.portfolio-link:hover .card-text,
+.portfolio-link:focus .card-text {
   transform: translateY(0);
 }
 /* Portfolio title */
@@ -522,6 +523,8 @@ header {
   left: 50%;
   transform: translateX(-50%) translateY(-50%) scale(1);
 
+  padding: 40px;
+
   width: 530px;
   height: 580px;
 
@@ -539,14 +542,19 @@ header {
   width: 30px;
   height: 30px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .modal-button:hover,
 .modal-button:focus {
-  fill: red;
+  fill: var(--accent-color);
 }
 /* footer */
 .footer {
@@ -559,6 +567,7 @@ header {
   align-items: baseline;
   gap: 70px;
 }
+
 /* contacts in footer */
 .contacts {
   display: inline-block;
@@ -593,7 +602,8 @@ header {
 .footer-item > a {
   width: 100%;
 }
-.social-title {
+.social-title,
+.mailing-form-label {
   margin-bottom: 20px;
   color: var(--primary-background-color);
 }
@@ -611,4 +621,111 @@ header {
 .footer .social-link:hover,
 .footer .social-link:focus {
   background-color: var(--accent-color);
+}
+.mailing-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-left: 23px;
+}
+.mailing-box {
+  display: flex;
+  flex-direction: column;
+}
+.mailing-form-input {
+  padding: 15px 16px;
+  width: 360px;
+  height: 50px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.mailing-button {
+  gap: 10px;
+}
+.mailing-button-icon {
+  fill: var(--primary-background-color);
+}
+/* Style Form */
+textarea {
+  resize: none;
+}
+.form-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.form-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.1666;
+  letter-spacing: 0.01em;
+}
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+  fill: var(--title-text-color);
+}
+.form-input {
+  padding: 0 12px 0 40px;
+  height: 40px;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.form-input:focus + .form-icon {
+  fill: var(--accent-color);
+}
+.form-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-label-terms {
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
+.checkbox {
+  margin-bottom: 30px;
+}
+.checkbox-link {
+  color: var(--accent-color);
 }
