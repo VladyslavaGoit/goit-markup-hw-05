@@ -318,6 +318,26 @@
             </li>
           </ul>
         </div>
+
+        <form class="mailing-form" name="mailing-form" autocomplete="on" novalidate>
+          <div class="mailing-box">
+            <label class="mailing-form-label" for="sign-up">Підпишіться на розсилку</label>
+            <input
+              class="mailing-form-input"
+              type="email"
+              id="sign-up"
+              name="email"
+              placeholder="E-mail"
+            />
+          </div>
+
+          <button class="hero-button mailing-button" type="submit">
+            Підписатися
+            <svg class="mailing-button-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
   </body>

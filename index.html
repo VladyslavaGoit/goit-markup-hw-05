@@ -351,7 +351,7 @@
             </svg>
           </button>
           <form name="contact-form" autocomplete="on" novalidate>
-            <h1 class="form-title">Залиште свої дані, ми вам передзвонимо</h1>
+            <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
 
             <label class="form-label" for="name">Ім'я</label>
             <div class="form-field">
@@ -382,7 +382,12 @@
               placeholder="Введіть текст"
             ></textarea>
             <div class="checkbox">
-              <input type="checkbox" name="terms-checkbox" id="terms-checkbox" />
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="terms-checkbox"
+                id="terms-checkbox"
+              />
               <label class="form-label-terms" for="terms-checkbox"
                 >Погоджуюся з розсилкою та приймаю
                 <a class="checkbox-link" href="#">Умови договору</a></label
